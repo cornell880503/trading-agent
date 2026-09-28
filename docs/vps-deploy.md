@@ -83,7 +83,7 @@ sudo apt update && sudo apt install -y python3-venv python3-pip git
 
 # A dedicated unprivileged user. The bot never needs root.
 sudo adduser --system --group --home /opt/trading-agent okxbot
-sudo -u okxbot git clone https://github.com/cornell880503-bot/trading-agent.git /opt/trading-agent
+sudo -u okxbot git clone https://github.com/cornell880503/trading-agent.git /opt/trading-agent
 cd /opt/trading-agent
 
 sudo -u okxbot python3 -m venv .venv

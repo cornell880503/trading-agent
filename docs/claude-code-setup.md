@@ -52,12 +52,13 @@ file stays `0600` and the secrets never enter the caller's environment.
 ```bash
 # ~/.ssh/config
 Host okx-vps
-    HostName 139.162.42.221
-    User root
+    HostName <your-vps-ip>
+    # needs passwordless sudo to the okxbot account: the wrapper runs `sudo -u okxbot`
+    User <your-ssh-user>
     IdentityFile ~/.ssh/id_ed25519
 
 mkdir -p ~/bin
-curl -o ~/bin/okxbot https://raw.githubusercontent.com/cornell880503-bot/trading-agent/main/deploy/okxbot-remote
+curl -o ~/bin/okxbot https://raw.githubusercontent.com/cornell880503/trading-agent/main/deploy/okxbot-remote
 chmod +x ~/bin/okxbot
 export PATH="$HOME/bin:$PATH"     # add to ~/.zshrc
 okxbot status

@@ -34,7 +34,7 @@ this repository, because that pattern dies with the process that runs it.
 ## Install
 
 ```bash
-git clone https://github.com/cornell880503-bot/trading-agent.git
+git clone https://github.com/cornell880503/trading-agent.git
 cd trading-agent
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
